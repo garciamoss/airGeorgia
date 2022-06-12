@@ -18,8 +18,7 @@ h1 {font-family: 'Libre Baskerville', serif;}
 .card-img-top {background-color: #3B5A2A !important; color: #fff; padding: 1rem; border-radius: 20px 20px 0px 0 !important;}
 
 /*Footer*/
-footer {padding-top: 1rem;}
-footer img {padding: 0 1rem;}
+footer img {padding: .75rem !important;}
 
 /*Media Queries*/
 
