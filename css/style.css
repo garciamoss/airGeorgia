@@ -33,11 +33,13 @@ footer img {padding: .75rem !important;}
     /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
     h1 {font-size: 2.5rem !important;}
-    
+    .right {border-left: 0px;}
 }
 
     /*Small devices (landscape phones, 576px and up*/
-@media (min-width: 576px) and (max-width: 767.98px) {}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .right {border-left: 0px;}
+}
 
     /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -46,7 +48,7 @@ footer img {padding: .75rem !important;}
 
     /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .myNavbar {display: none;}
+    
 }
 
     /*Extra large devices (large desktops, 1200px and up)*/
