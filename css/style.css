@@ -1,6 +1,6 @@
 body {background-color: #C8E3E8; font-family: 'Oxygen', sans-serif; margin-top: 5.125rem; }
 h1 {font-family: 'Libre Baskerville', serif;}
-.a {text-decoration: none !important;}
+.a {text-decoration: none !important; color:#fff;}
 .wrapper {margin: 0 auto;}
 .left, .right {width:50%}
 .right {border-left: #fff 1px solid;}
@@ -22,6 +22,14 @@ li:hover {background-color: #fd9d3d !important;}
 .jumbo {margin: 2.25rem;}
 .nearby {padding: 0px;}
 
+/*Sign In Styles*/
+.signin-container {border: 3px solid #333333;
+    border-radius: 25px;
+    background: #c8e3e8;
+    padding: 20px;
+    width: 400px;
+}
+
 /*Cards*/
 .card-deck {margin-bottom: 6rem;}
 .card {background-color: transparent !important; border: none !important;}
@@ -36,6 +44,19 @@ table, th, th {
   }
 .container {width: 50%; color: white; align-self: center;}
 .container-p {font-style:normal; font-weight: normal; text-decoration: none; text-transform: auto; color: white; text-align:center;}
+
+/*Checkbox*/
+.container-checkbox {  display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+    
 
 /*Footer*/
 footer img {padding: .75rem !important;}
