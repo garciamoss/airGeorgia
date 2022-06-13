@@ -31,6 +31,9 @@ li:hover {background-color: #fd9d3d !important;}
 .header-img {padding: 1rem; }
 
 /*Text*/
+table, th, th {
+    align-items: left;
+  }
 .container {width: 50%; color: white; align-self: center;}
 .container-p {font-style:normal; font-weight: normal; text-decoration: none; text-transform: auto; color: white; text-align:center;}
 
