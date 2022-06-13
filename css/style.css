@@ -27,6 +27,13 @@ li:hover {background-color: #fd9d3d !important;}
 .card {background-color: transparent !important; border: none !important;}
 .card-img-top {background-color: #3B5A2A !important; color: #fff; padding: 1rem; border-radius: 20px 20px 0px 0 !important;}
 
+/*Images*/
+.header-img {padding: 1rem; }
+
+/*Text*/
+.container {width: 50%; color: white; align-self: center;}
+.container-p {font-style:normal; font-weight: normal; text-decoration: none; text-transform: auto; color: white; text-align:center;}
+
 /*Footer*/
 footer img {padding: .75rem !important;}
 
