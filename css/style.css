@@ -36,6 +36,14 @@ nav .btn:hover {background-color: #fd9d3d !important; border: 0px;}
 .card-body {background-color: #fff !important; border: #3b5a2a 1px solid !important;}
 .card h4:hover {color: #fd9d3d !important;}
 
+/*Forms*/
+.form-group {
+    display:flex;
+    justify-content: center;
+    width:400px;
+    margin: 0 auto;
+}
+
 /*Images*/
 .header-img {padding: 1rem; }
 
