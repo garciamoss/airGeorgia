@@ -1,97 +1,481 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>AirGeorgia AAMP</title>
-    
-        <!--Bootstrap links-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="icon" type="image/x-icon" href="images/favicon.png">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-    
-        <!--Google Fonts-->
-        <style>
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap');
-        </style>
-    </head>
-    <body>
-      <!--Navigation-->
-      <nav class="navbar navbar-expand-lg fixed-top customNav">
-        <a class="navbar-brand" href="index.html"><img src="images/logoSM.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav">
-            <li><a href="profile.html"><img src="images/profile.png" alt="Profiles and Settings link"></a></li>
-            <li><a href="maps.html"><img src="images/Maps.png" alt="Maps and Locationslink"></a></li>
-            <li><a href="reports.html"><img src="images/Reports.png" alt="Reports link"></a></li>
-            <li><a href="about.html"><img src="images/AQIw.png" alt="About AQI  link"></a></li>
-            <li><a href="profile.html"><img src="images/sos.png" alt="SOS link"></a></li>
-          </ul>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign out</button>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/main.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FR7YM4X0NQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FR7YM4X0NQ');
+</script>
+	
+	<!-- Hotjar Tracking Code for https://garciamoss.github.io/airgeorgia/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3017134,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+	
+	
+    <title>Georgia Air Monitoring</title>
+    <link rel="shortcut icon" href="favicon.ico">
+<style> body {background-image: url("images/fieldBG.png"); background-size: cover; text-align: center; color: #fff; min-height: 460px;border-radius: 0px;}</style></head>
+
+<body>
+    <div class="topper" class="clearfix">
+    <div class="topper-inner clearfix">
+        <a href="https://georgia.gov" target="_blank" class="georgia-gov-link topper-link">Georgia.gov</a>
+    </div>
+</div>
+    <div class="outer-wrapper">
+        <div class="inner-wrapper">
+            <header>
+    <div class="clearfix">
+        <div class="header-stuff">
+            <div class="header-col">
+                <div class="header-img-title">
+                    <div class="logo-title clearfix">
+                        <div class="logo-img">
+                            <a href="./" rel="home"  class="active">
+                            <img src="images/logo.png" alt="The Ambient Monitoring Program" id="logo">
+                        </a>
+                        
+                        </div>
+                        <a href="./" rel="home"  class="active site-name-link">
+                            <h1 class="site-name">
+                                Ambient Air Monitoring Program
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-col banner-links-header-wrapper">
+                <div class="row banner-links-header">
+                    <ul class="list-inline leaf-menu">
+                        <li><a href="https://epd.georgia.gov/" title="EPD Main Site">EPD Main Site</a></li>
+                        <li><a href="https://epd.georgia.gov/about-us/air-protection-branch" title="APB Main Site">APB Main Site</a></li>
+                        <li><a href="mailto:DeAnna.Oser@dnr.ga.gov" title="Contact Us">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="site-slogan">A Program of the Air Protection Branch</div>
         </div>
-      </nav>
-        
-        <!--Jumbotron-->
-          <div class="jumbotron">
-              <h1 class="display-4">Good morning, {#}!</h1>
-              <p class="lead">On this Hump Day, take Fido to the local dog park and play fetch.</p>
-              <img src="images/aqiDash.png" alt="AQI Dashboard" class="jumbo">
-              <p>AQIs near you:
-            <ul class="nearby">
-              <img src="images/Atlanta.png">
-              <img src="images/McDonough.png">
-              <img src="images/Gwinnett Tech.png">
-              <img src="images/Athens.png">
-            </ul></p>
-          </div>
+    </div>
+</header> 
+            <div class="nav-and-main-wrapper">
+                
 
-        <!--Card Deck-->
-          <div class="card-deck">
-            <div class="card">
-              <div class="card-img-top">Your Week Ahead</div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+			aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand navbar-nav-title" href="#">
+				Home
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+
+				 
+				 
+				 
+					 
+					
+						<li class="dropdown">
+
+						<a href="./">Air Monitoring 
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+						</a>
+
+						<ul class="dropdown-menu">
+							
+
+							<li ><a href="georgiasairmonitoringprogram.html" target="" title="Georgia">Georgia</a></li>
+							
+
+							<li ><a href="surroundingstates.html" target="" title="Surrounding States">Surrounding States</a></li>
+							
+
+							<li ><a href="http://www.airnow.gov/" target="_blank" title="National Map">National Map</a></li>
+							
+						</ul>
+					
+					</li>
+				 
+					 
+					
+						<li class="dropdown">
+
+						<a href="#">Pollutants 
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+						</a>
+
+						<ul class="dropdown-menu">
+							
+
+							<li ><a href="overview.html" target="" title="Overview">Overview</a></li>
+							
+
+							<li ><a href="informationaboutozone.html" target="" title="Ozone">Ozone</a></li>
+							
+
+							<li ><a href="informationaboutpm.html" target="" title="PM">PM</a></li>
+							
+
+							<li ><a href="informationaboutso2.html" target="" title="SO2">SO2</a></li>
+							
+
+							<li ><a href="informationaboutco.html" target="" title="CO">CO</a></li>
+							
+
+							<li ><a href="informationaboutlead.html" target="" title="Lead">Lead</a></li>
+							
+
+							<li ><a href="informationaboutno2.html" target="" title="NO2">NO2</a></li>
+							
+
+							<li ><a href="airtoxics.html" target="" title="Air Toxics">Air Toxics</a></li>
+							
+						</ul>
+					
+					</li>
+				 
+					 
+					
+						<li ><a href="aqiexplained.html" target="" title="AQI Explained"> AQI Explained</a> 
+					
+					</li>
+				 
+					 
+					
+						<li class="dropdown">
+
+						<a href="#">Georgia's Air Quality 
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+						</a>
+
+						<ul class="dropdown-menu">
+							
+
+							<li ><a href="trends.html" target="" title="Trends">Trends</a></li>
+							
+
+							<li ><a href="violations.html" target="" title="Violations">Violations</a></li>
+							
+
+							<li ><a href="historicaldata.html" target="" title="Historical Data">Historical Data</a></li>
+							
+
+							<li ><a href="wildfires.html" target="" title="Wildfires">Wildfires</a></li>
+							
+						</ul>
+					
+					</li>
+				 
+					 
+					
+						<li class="dropdown">
+
+						<a href="#">Reports 
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+						</a>
+
+						<ul class="dropdown-menu">
+							
+
+							<li ><a href="annualreports.html" target="" title="Annual Reports">Annual Reports</a></li>
+							
+
+							<li ><a href="networkplans.html" target="" title="Network Plans">Network Plans</a></li>
+							
+
+							<li ><a href="docs/2020 Five-Year Network Assessment.pdf" target="" title="Five Year Network Assessment">Five Year Network Assessment</a></li>
+							
+
+							<li ><a href="ozoneexceedancereport.html" target="" title="Ozone Exceedance Reports">Ozone Exceedance Reports</a></li>
+							
+						</ul>
+					
+					</li>
+				 
+					 
+					
+						<li ><a href="https://epd.georgia.gov/office-state-climatologist" target="_blank" title="Office of the State Climatologist"> Office of the State Climatologist</a> 
+					
+					</li>
+                    <li><button style="background:#c8e3e8; border-radius: 11px; padding: 20px 45px; color: #333333; display: inline-block; font: normal normal 26px/1; font-family: 'Oxygen', sans-serif; text-align: center;"><a href="signin.html">Login</a></button></li>
+				
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav> 
+                    <div class="wrap">
+    
+</div><!-- /wrap -->    
+
+<section>
+    <div class="container-fluid forecast-header-container">
+	<div class="row  align-items-start forecast-header-upper">
+		<div id="forecastspinner">
+			<img src="images/spinner_30x30.gif" />
+		</div>
+		<div class="col-sm-12 forecast-header-upper-title">
+			AIR QUALITY FORECAST FOR <span id="effective-date"> TODAY </span>
+		</div>
+	</div>
+	<div class="forecast-header-lower">
+		<div class="forecast-header-lower-left">
+
+			<div class="block">
+				<a href="AtlantaForecast.html">
+					<div id="3f501687-0722-438e-bed7-d89387024f08" class="circle unknown">
+						<div class="forecast-city-circle-name">Atlanta</div>
+					</div>
+				</a>
+			</div>
+			<div class="block">
+				<a href="MaconForecast.html">
+					<div id="3ffbc4da-6419-48b5-9651-12e7d1a47491" class="circle unknown">
+						<div class="forecast-city-circle-name">Macon</div>
+					</div>
+				</a>
+			</div>
+			<div class="block">
+				<a href="ColumbusForecast.html">
+					<div id="ff26f5d4-22a4-4572-bd66-ab28c7127dd4" class="circle unknown">
+						<div class="forecast-city-circle-name">Columbus</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="forecast-header-lower-right">
+			<div class="forecast-header-aqi-index">
+				<img src="images/AQIIndex.png">
+			</div>
+			<div class="forecast-header-aqi-range">
+				<div class="AQILegendPanel AQILegendPanelGeo AQI">
+    <table class="AQILegend2" summary="AQI Forecast Legend">
+        <!--<thead>
+            <tr>
+                <th class="forecastLegendHeader">AQI Level
+                </th>
+                <th class="forecastLegendHeader aqiLegendPanelLevelValueCell">Value</th>
+            </tr>
+        </thead>-->
+        <tbody>
+            <tr id="AQILegendGood">
+                <td class="good">Good
+                </td>
+                <td class="good aqiLegendPanelLevelValueCell">0-50</td>
+            </tr>
+            <tr id="AQILegendModerate">
+                <td class="moderate">Moderate
+                </td>
+                <td class="moderate aqiLegendPanelLevelValueCell">51-100</td>
+            </tr>
+            <tr id="AQILegendUnhealthyForSensitiveGroups">
+                <td class="sensitive">Unhealthy for<br> Sensitive Groups
+                </td>
+                <td class="sensitive aqiLegendPanelLevelValueCell">101-150</td>
+            </tr>
+            <tr id="AQILegendUnhealthy">
+                <td class="unhealthy">Unhealthy
+                </td>
+                <td class="unhealthy aqiLegendPanelLevelValueCell">151-200</td>
+            </tr>
+            <tr id="AQILegendVeryUnhealthy">
+                <td class="veryunhealthy">Very Unhealthy
+                </td>
+                <td class="veryunhealthy aqiLegendPanelLevelValueCell">201-300</td>
+            </tr>
+            <tr id="AQILegendHazardous">
+                <td class="hazardous">Hazardous
+                </td>
+                <td class="hazardous aqiLegendPanelLevelValueCell">301-500</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="map-iframe-container" class="loadspinnercontainer">
+	<iframe scrolling="no" id="map-iframe" src="https://airgeorgia.org/AirVision/Public/"></iframe>
+	<div id="loading-map-message">Loading map...</div>
+</div>
+<div class="center mapFooterMessage">
+	<div>
+		This information is published as soon as the values are detected, and does not imply that the data have passed quality assurance validation procedures.   
+	</div>
+	<div>
+		To get more information about a location, hover your mouse over the location.  
+	</div>
+	<div>
+		For an explanation of the AQI values and colors, <a href="aqiexplained.html" >click here</a>.
+	</div>
+</div>
+<script src="scripts/iframeResizer/iframeResizer.min.js"></script>
+<script type="text/javascript">
+	$('#map-iframe').on("load", function () {
+		$('#loading-map-message').css('display', 'none');
+		$('#map-iframe-container').removeClass('loadspinnercontainer');
+		AdjustMapIframeHeightOnLoad();
+	}
+	);
+	function AdjustMapIframeHeightOnLoad() {
+		//NOTE: this requires the target page on the remote site to have the iframeResizer.contentWindow.min.js script!
+		$('iframe').iFrameResize([{ log: true }, '#map-iframe']);
+	}
+
+	// get the forecast from AirVision and display the info
+	$.getJSON("https://airgeorgia.org/AirVision/api/Forecast", function (data) {
+		$.each(data, function (key, val) {
+			console.log(key, val);
+			$('#' + val['SourceSiteId']).removeClass('unknown');
+			$('#' + val['SourceSiteId']).addClass(val['Class']);
+
+			var d = new Date(val['EffectiveDay']);
+			$('#effective-date').text(d.toLocaleDateString());
+		});
+
+		$('#forecastspinner').hide();
+	}).fail(function(jqxhr){
+   		console.log('unable to get forecast data', jqxhr.responseText);
+		$('#forecastspinner').hide();
+	});
+
+</script>
+<img src="images/landingpage-download-links.png">
+</section>
             </div>
-            <div class="card">
-              <div class="card-img-top">Top Pollutants</div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+        </div>
+        <footer>
+    <div class="footer-inner">
+        <div class="container-fluid">
+            <div class="row banner-links-footer">
+                <ul class="list-inline leaf-menu">
+                    <li><a href="https://epd.georgia.gov/" title="EPD Main Site">EPD Main Site</a></li>
+                    <li><a href="https://epd.georgia.gov/about-us/air-protection-branch" title="APB Main Site">APB Main Site</a></li>
+                    <li><a href="mailto:DeAnna.Oser@dnr.ga.gov" title="Contact Us">Contact Us</a></li>
+                </ul>
             </div>
-            <div class="card">
-              <div class="card-img-top">Try O<sub>2</sub> to Go or O<sub>2</sub> Wearable app</div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+
+            <div class="row">
+
+                <ul class="list-inline leaf-menu">
+                    <li><a href="https://epd.georgia.gov/about-us/air-protection-branch" title="EPD Air Protection Branch Division">EPD Air Protection Branch</a></li>
+                    <li><a href="https://epd.georgia.gov/" title="Environmental Protection Division">Environmental Protection Division</a></li>
+                    <li><a href="http://georgia.gov/privacysecurity" title="Privacy/Security">Privacy/Security</a></li>
+                </ul>
             </div>
-          </div>
+            <div class="row">
 
-        <!--Footer-->
-        <footer class="container-fluid text-center customNav" style="position: fixed;left: 0;bottom: 0; width: 100%;">
-          <div><p><small>Customize information your way! New improved interface now available on your iPhone, Android devices and Wearables. Download <b>O<sub>2</sub> To Go</b> today!</small></p>
-        <img src="images/applestore.png" alt=" Download from Apple store" style="width:150px;"><img src="images/playstore.png" alt="Download from google playstore" style="width:150px;">
-          </div> 
-        </footer>
-        
+                <div class="col-xs-12 col-sm-3 logo-container">
+                    <img src="images/ga-footer-logo.png" alt="Georgia Logo" />
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="menu-list">
+                        <li class="footer-link-header">
+                            AT YOUR SERVICE
+                        </li>
+                        <li>
+                            <a href="https://www.georgia.gov" title="Georgia">GeorgiaGov</a>
+                        </li>
+                        <a href="https://georgia.gov/agency-list" title="Agencies">Agencies</a>
+                        </li>
+                        <li>
+                            <a href="https://georgia.gov/municipality-list" title="Municipality List">Cities &amp; Counties</a>
+                        </li>
+                        <li>
+                            <a href="https://georgia.gov/popular-topics" title="Popular Topics">Popular Topics</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="menu-list">
+                        <li class="footer-link-header">
+                            ELECTED OFFICIALS
+                        </li>
+                        <li><a href="https://gov.georgia.gov/" title="Governor">Governor</a>
+                        </li>
+                        <li><a href="https://georgia.gov/elected-officials" title="List of all elected officials in the State of Georgia.">More Officials</a>
+                    </ul>
+                </div>
+                <!-- give it a col-sm-4 instead of col-sm3, so it wraps to a new row on small devices.
+                this is kinda weird, but makes it work more like Georgia's other state footer. -->
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <ul class="menu-list">
+                        <li class="footer-link-header">
+                            NEED HELP?
+                        </li>
+                        <li><a href="mailto:deanna.oser@dnr.ga.gov">Air Monitoring Question?</a>
+                        </li>
+                        <li><a href="tel:1-800-436-7442" title="Telephone">1-800-436-7442</a>
+                        </li>
+                        <li><a href="https://georgia.gov/georgias-call-center-1800georgia" title="Georgia Call Center">Georgia Call Center</a>
+                        </li>
+                        <li><a href="https://gbi.georgia.gov/human-trafficking-notice" title="Human Trafficking Notice">Human Trafficking Notice</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <!-- note jquery is included in the head, just to ensure page content has access to it -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    </body>
-    <!--Bootstrap Scripts-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    ga('create', 'UA-63532636-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+
 </html>

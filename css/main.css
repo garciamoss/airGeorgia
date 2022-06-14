@@ -1,0 +1,1200 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: #555;
+	font-family: Verdana, Geneva, sans-serif;
+	/*font-family: "adobe-garamond-pro",sans-serif;*/
+	/*font-size: 100%;*/
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+.outer-wrapper {
+	background: #f5f5f6 url("/images/header-bg.png") repeat-x top left;
+}
+
+.inner-wrapper {
+	max-width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-and-main-wrapper {
+	/*box-shadow: inset 0 0 1em lightgray, 0 0 1em darkgray;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+
+/* we are using two anchor tags side by side for our clickable parent menus
+This means we need to inline-block or table-cell them to get them side by side  */
+
+.nav>li>a {
+	display: table-cell;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+
+/* reduce the padding on the dropdown-toggle caret items */
+
+.nav>li>.dropdown-toggle {
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+
+/* nav hover over to expand menus, but only in wide mode when it's a full menu bar, not the hamburger menu */
+
+@media (min-width: 768px) {
+	.dropdown:hover .dropdown-menu {
+		display: block;
+		margin-top: 0;
+	}
+	/* this keeps the navbar from wrapping to the next line if you have long menu items. instead this makes it shrink up and fit the content */
+	.navbar-nav {
+		display: flex;
+	}
+}
+
+
+/*
+
+	Typography
+
+*/
+
+p {
+	font-size: 0.99em;
+	line-height: 130%;
+	margin: 0 0 5px 5px;
+}
+
+h1 {
+	font-size: 1.8em;
+	line-height: 130%;
+}
+
+h2 {
+	font-size: 1.6em;
+	line-height: 120%;
+}
+
+h3 {
+	font-size: 1.4em;
+	line-height: 120%;
+}
+
+h4 {
+	font-size: 1em;
+	line-height: 140%;
+}
+
+.topper {
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 26px;
+	background: #e9e9e9;
+	border-bottom: 1px solid #a6a6a6;
+}
+
+.topper a.georgia-gov-link {
+	display: block;
+	/*position: absolute;*/
+	left: 0;
+	height: 26px;
+	width: 125px;
+	margin: 0 8px;
+	text-indent: -9999em;
+	background: url(../images/ga-gov.png) no-repeat center left;
+}
+
+.topper-inner {
+	max-width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	border-bottom: 2px solid #555;
+	/*width: 1040px;*/
+	/*height: 118px;*/
+}
+
+header h1 {
+	margin: 0;
+}
+
+header {
+	/*background: #fff url('../images/header-bg-1.png') repeat-x top left;*/
+	/*color: transparent;*/
+	display: block;
+	/*width: 1040px;*/
+	/*height: 118px;*/
+}
+
+header h1 a {
+	text-decoration: none;
+	color: #213421;
+}
+
+.header-stuff {
+	margin-left: auto;
+	margin-right: auto;
+	/*width: 720px;*/
+	width: 90%;
+	/* padding-top: 10px;
+	padding-bottom: 10px; */
+	position: relative;
+}
+
+.site-slogan {
+	color: #213421;
+	font-size: 12px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+	margin-top: 15px;
+}
+
+.site-name {
+	color: #213421;
+	position: relative;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: auto;
+	/* float: left; */
+	margin-top: 15px;
+	margin-left: 14px;
+	/*padding-left: 0;*/
+	padding-left: 68px;
+	font-size: 20px;
+	/*width: 470px;*/
+}
+
+.site-name-link:hover {
+	text-decoration: none;
+}
+
+@media (min-width: 740px) {
+	.site-name {
+		font-size: 24px;
+	}
+	.site-slogan {
+		font-size: 14px;
+		margin-top: 15px;
+	}
+	.header-stuff {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+@media (min-width: 980px) {
+	.site-name {
+		font-size: 36px;
+	}
+	.site-slogan {
+		font-size: 16px;
+		margin-top: 15px;
+	}
+}
+
+/* to mimick the Georgia EPD site, show these banner links in the header when wide enough,
+otherwise show them in the footer */
+.banner-links-header {
+	display: none;
+}
+.banner-links-footer {
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.banner-links-footer {
+		display: none;
+	}
+	.banner-links-header {
+		display: block;
+		text-align: right;
+		font-size: 11px;
+	}
+}
+
+.header-col {
+	display: inline-block;
+}
+
+.banner-links-header-wrapper {
+	float:right;
+	margin-top: 10px;
+}
+
+.header-stuff li {
+	list-style-type: none;
+}
+
+.loadspinnercontainer {
+	background-image: url("../images/spinner_30x30.gif");
+	background-repeat: no-repeat;
+	background-position: 50% 5%;
+}
+
+#forecastspinner {
+	height: 20px;
+	width: 20px;
+}
+
+.forecast-header-upper #forecastspinner {
+	position: absolute;
+}
+
+
+/*menu stuff */
+
+.toggle, [id^=drop] {
+	display: none;
+}
+
+
+/* Giving a background-color to the nav container. */
+
+nav {
+	margin: 0;
+	padding: 0;
+	background-color: #254441;
+}
+
+#logo {
+	display: block;
+	/*padding: 0 30px;*/
+	float: left;
+	font-size: 20px;
+	line-height: 60px;
+}
+
+
+/* Media Queries
+--------------------------------------------- */
+
+
+/*@media all and (max-width: 768px) {*/
+
+@media (max-width: 768px) {
+	#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		/* float: none; */
+	}
+}
+
+
+/* end menu stuff */
+
+section {
+	/*min-width: 822px;*/
+	/*width: 822px;*/
+	/*width: 100%;*/
+	height: auto;
+	min-height: 400px;
+	background: #fff;
+	padding: 10px;
+	/*border-left: 2px solid #555;*/
+}
+
+section a {
+	text-decoration: underline;
+}
+
+section a:link {
+	color: #92501a;
+}
+
+section a:hover {
+	color: #202124;
+}
+
+section a:visited {
+	color: #92501a;
+}
+
+.container {
+	max-width: 100%;
+}
+
+footer {
+	/*background: #ddd;*/
+	background: #676567;
+	color: #FFF;
+	padding: 15px;
+	font: 10px Verdana, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	border-top: 1px solid #a6a6a6;
+}
+
+.footer-inner {
+	max-width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer .logo-container {
+	text-align: left;
+}
+
+footer .logo-container img {
+	max-width: initial;
+	height: initial;
+}
+
+footer .footer-link-header {
+	white-space: nowrap;
+}
+
+footer .menu-list {
+	text-align: left;
+	padding-top: 10px;
+}
+
+footer .footer-link-header {
+	font-weight: bolder;
+}
+
+.leaf-menu li {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.leaf-menu li+li:before {
+	content: "| ";
+}
+
+footer li {
+	list-style-type: none;
+}
+
+footer a {
+	color: #FFF;
+	text-decoration: underline
+}
+
+footer a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+
+/* start commented backslash hack \*/
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+.wrap {
+	background: white;
+	margin: 0px;
+	/* hidden by default, shown using media query on wider screens */
+	display: none;
+}
+
+.wrap h3 {
+	padding: 15px;
+	margin: 0px;
+}
+
+
+/* Show the wrap title, and hide the navbar short title */
+
+@media (min-width: 768px) {
+	.navbar-nav-title {
+		display: none;
+	}
+	.wrap {
+		display: block;
+	}
+}
+
+
+/* close commented backslash hack */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.logo-img #logo {
+	height: auto;
+	max-height: 60px;
+	width: auto;
+	/* position: absolute; */
+}
+
+@media (min-width: 740px) {
+	.logo-img #logo {
+		height: auto;
+		max-height: 65px;
+		width: auto;
+	}
+}
+
+
+/*@media (min-width: 980px) {
+	.logo-img #logo {
+		height: auto;
+		max-height: 136px;
+		width: auto;
+		max-width: 100%;
+	}
+}*/
+
+
+/* forecast pages */
+
+.forecast-area-left {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.forecast-area-right {
+	float: left;
+	display: table-cell;
+	vertical-align: top;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.forecast-area-left-images {}
+
+.forecast-area-left-images-table {
+	max-width: 200px;
+}
+
+
+/* this media query is a way to isolate IE10+, which has a layout problem with the max-width stuff */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	/* IE10+ specific styles go here */
+	/* nasty little hack because ie sucks */
+	.forecast-area-left-images-table {
+		max-width: none;
+	}
+	.forecast-area-left-images-table img {
+		height: 100px;
+		width: auto;
+	}
+}
+
+.forecast-page-aqi-index {
+	display: table-cell;
+}
+
+.forecast-page-about-this-index {}
+
+.forecast-page-aqi-range {
+	display: table-cell;
+}
+
+.forecast-page-iframe-wrapper {
+	width: 375px;
+	height: 300px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.forecast-page-iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.forecast-area-wrapper {}
+
+
+/* drop down the forecast info below the image on smaller screens */
+
+@media(min-width: 400px) {
+	.forecast-area-wrapper {
+		display: table;
+	}
+	.forecast-area-right {
+		float: none;
+	}
+}
+
+.forecastPanelHeader {}
+
+.forecastPanelTable {}
+
+.forecastPanelSiteNameCell {
+	text-align: right;
+}
+
+.forecastPanelAqiCategoryCell {
+	text-align: center;
+	border-radius: 8px;
+	padding: 1px 10px 1px 10px;
+}
+
+.siteForecastPanelHeader {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.forecastCaption {
+	display: inline;
+	font-weight: bold;
+}
+
+.forecastValue {
+	display: inline;
+}
+
+.forecastDetailText {
+	/*font-size: small;*/
+}
+
+.siteForecastParameterDisplayInfo {
+	/*font-size: small;*/
+}
+
+
+/* forecast stats page */
+
+.forecaststats-image-wrapper {
+	max-width: 500px;
+	max-height: 400px;
+	overflow: hidden;
+	background-image: url("../images/spinner_30x30.gif");
+	background-repeat: no-repeat;
+	background-position: 50% 5%;
+}
+
+
+/* violations page */
+
+.violations-image-wrapper {
+	max-width: 100%;
+	max-height: 430px;
+	overflow-y: hidden;
+	overflow-x: auto;
+	/* the border-bottom is because the rendered image has a black border,
+	so this makes it pretty much match up and look natural */
+	border-bottom: solid 1px;
+	display: inline-block;
+}
+
+.violations-image-wrapper img {
+	max-width: initial;
+	/*height: auto;*/
+}
+
+
+/* forecast header area on main map page */
+
+.forecast-header-container {
+	max-width: 700px;
+}
+
+.forecast-header-upper {
+	background-color: #dce6f2;
+	border-color: #3c5929;
+	border-style: solid solid none solid;
+	border-radius: 7px 7px 0 0;
+	text-align: center;
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.forecast-header-upper-title {}
+
+.forecast-header-lower {
+	background-color: #17375e;
+	border-color: #17375e;
+	border-style: solid;
+	border-radius: 7px 7px 7px 7px;
+	text-align: center;
+	/*padding: 5px;*/
+}
+
+.forecast-header-lower-container {
+	/* set a minimum width for the whole forecast header thing */
+	/*min-width: 300px;*/
+}
+
+.forecast-header-lower-left {
+	/*position: relative;
+    height: 0;
+    padding-top: 25%;*/
+	white-space: nowrap;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: inline-block;
+}
+
+.forecast-header-lower-left img {
+	max-width: 100%;
+	/* do not stretch the bootstrap column */
+}
+
+
+/* They asked for the links to be underlined in this particular case */
+
+.forecast-header-lower-left a {
+	text-decoration: underline;
+}
+
+.forecast-header-aqi-index {
+	display: table-cell;
+	/*max-height: 80px;*/
+	/*height: 80px;*/
+	vertical-align: top;
+}
+
+.forecast-header-aqi-range {
+	display: table-cell;
+}
+
+.forecast-header-aqi-index img {
+	max-height: 80px;
+}
+
+.forecast-header-aqi-range img {}
+
+.forecast-header-lower-right {
+	padding-left: 5px;
+	padding-right: 5px;
+	display: inline-table;
+	vertical-align: middle;
+}
+
+.block {
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#map-iframe {
+	margin: 0;
+	width: 100%;
+	/*height: 658px;*/
+	min-height: 650px;
+	border: none;
+	overflow: hidden;
+}
+
+.mapFooterMessage {
+	font-size: .8em;
+}
+
+@media (max-width: 340px) {
+	.forecast-header-lower-left {
+		display: block;
+	}
+	.forecast-header-lower-right {
+		display: block;
+	}
+	.forecast-header-aqi-range {
+		display: block;
+	}
+	.forecast-header-aqi-index {
+		display: block;
+	}
+	.block {
+		/* collapse circles to rounded boxes when too small */
+		display: block;
+	}
+}
+
+.forecast-city-circle-name {
+	color: #17375e;
+	font-weight: bold;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.circle {
+	border-radius: 80px;
+	height: 80px;
+	font-weight: bold;
+	width: 80px;
+	display: table;
+	margin: 3px;
+}
+
+.circle:hover {
+	/*border: solid 1px lightskyblue;*/
+	/*border: solid 1px lightgoldenrodyellow;*/
+	/*border: solid 2px blue;*/
+	border: solid 1px blue;
+	/*-webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);*/
+}
+
+.image-link-outline:hover {
+	border: solid 1px blue;
+}
+
+
+/* found width by trial and error */
+
+@media(max-width: 623px) {
+	.circle {
+		/* collapse circles to rounded boxes when too small */
+		height: initial;
+		padding: 5px;
+	}
+}
+
+.about-aqi-table {
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+.about-aqi-table th, .about-aqi-table td {
+	border: 1px solid black;
+	padding: 2px;
+}
+
+.about-aqi-table th {
+	background-color: darkblue;
+	color: white;
+}
+
+.percent15 {
+	width: 15%;
+}
+
+.about-pollutants-table {
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+.about-pollutants-table th, .about-pollutants-table td {
+	border: 1px solid black;
+	padding: 2px;
+	text-align: center;
+}
+
+.about-pollutants-table th {
+	background-color: LightGreen;
+}
+
+.about-pollutants-table td:first-child {
+	background-color: LightGreen;
+}
+
+​ .percent15 {
+	width: 15%;
+}
+
+.AQILegend2 {
+	width: 100%;
+	/*font-size: 2vw;*/
+	font-size: 9px;
+}
+
+.good {
+	background-color: #00E000;
+	color: #000000;
+}
+
+.moderate {
+	background-color: #FFFF00;
+	color: #000000;
+}
+
+.sensitive, .unhealthyforsensitivegroups {
+	background-color: #E08000;
+	color: #000000;
+}
+
+.unhealthy {
+	background-color: #FF0000;
+	color: #FFFFFF;
+}
+
+.veryunhealthy {
+	background-color: #A00040;
+	color: #FFFFFF;
+}
+
+.hazardous {
+	background-color: #800040;
+	color: #FFFFFF;
+}
+
+.unknown {
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+.unspecified {
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+.forecastLegendHeader {
+	padding-bottom: 5px;
+	text-decoration: underline;
+	background-color: #18305A;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.monitoring-image {
+	height: 45px;
+	width: 30px;
+}
+
+.center-image {
+	margin: 0 auto;
+	display: block;
+}
+
+.haircrossectionofpm-image {
+	/* height: 25px; */
+	/* width: 10px; */
+	/* float: left; */
+}
+
+.pm10pm2_5-image {
+	/* height:  45px; */
+	/* width: 45px; */
+	/* float: left; */
+}
+
+.pm-container {
+	float: left;
+	margin: 20px;
+}
+
+.pm-container2 {
+	float: right;
+	display: inline-grid;
+	margin: 20px;
+}
+
+.pmsources-image {
+	/* height: 75px; */
+	/* width: 25px; */
+	/* float: left; */
+}
+
+.floatright {
+	float: right;
+}
+
+.floatleft {
+	float: left;
+}
+
+.AirMonitors-3-500 {
+	height: 5px;
+	width: 5px;
+	float: right;	
+}
+
+.GeorgiaAirMonitoringHoverMap {
+	float: left;
+	padding-right: 20px;
+	padding-left: 5px;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+
+.collecting-air-samples {
+	padding-right: 5px;
+	padding-top: 10px;
+	margin-left: 10px;
+	float: right;
+	display: inline-grid;
+}
+
+.airnow {
+	float: right;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+	display: inline;
+}
+
+.weather-icon {
+	padding: 5px 5px 5px 5px;
+	float: right;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.AirMonitorSmall-image {
+	padding-left: 75px;
+	padding-right: 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-right: 200px;
+	margin-left: 20px;
+}
+
+.collecting-air-samples-250pxwide-image {
+	height: 20px;
+	width: 20px;
+	padding-right: 100px;
+	padding-top: 100px;
+	float: right;
+	margin: 20px;
+}
+
+.neighboring-left {
+	float: left;
+	margin-top: 50px;
+	margin-left: 70px;
+}
+
+.neighboring-right {
+	float: right;
+}
+
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.col-xs-2 {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.pollutantcontainer {
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.imagebuttoncontainer {
+	position: relative;
+	width: 50%;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #008CBA;
+}
+
+.container:hover .overlay {
+	opacity: 1;
+}
+
+.text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+/*****************************/
+/* Hover/touch tooltip stuff */
+.hoverable-container {
+	position: relative;
+}
+
+.popup-content {
+	display: none;
+}
+
+/* hover on desktop */
+.hoverable-container:hover .popup-content {
+	position: fixed;
+	z-index: 1;
+	left: 10px;
+	right: 10px;
+	top: 30%;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+/* touch screen while pressed */
+.hoverable-container:active .popup-content {
+	position: fixed;
+	z-index: 1;
+	left: 10px;
+	right: 10px;
+	top: 30%;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.popup-content-img-container {
+	text-align: center;
+}
+
+.popup-content img {
+	border: 1px solid black;
+}
+
+.hoverable-container:hover .normal {
+	/*display: none;*/
+}
+/*****************************/
+
+
+
+/*****************************/
+/* lightbox (popup with close button) */
+
+/* Unopened lightbox */
+.lightbox {
+	display: none;
+}
+
+/* Opened lightbox */
+.lightbox:target {
+	position: fixed;
+	z-index: 1;
+	left: 20px;
+	right: 20px;
+	top: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Lightbox content */
+.lightbox figcaption {
+	width: 25rem;
+	position: relative;
+	padding: 1.5em;
+	background-color: #dce6f2;
+}
+
+/* Close button */
+.lightbox .close {
+	position: relative;
+	display: block;
+}
+
+.lightbox .close::after {
+	right: -1rem;
+	top: -1rem;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	display: flex;
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	border-radius: 50%;
+	color: white;
+	content: "×";
+	cursor: pointer;
+}
+
+/* Lightbox overlay */
+.lightbox .close::before {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	/* background-color: rgba(0,0,0,.7); */
+	content: "";
+	cursor: default;
+}
+
+/*****************************/
+
+
+.pollutant-cell {
+	text-align: center;
+}
+
+.lightbox-img-container {
+	text-align: center;
+}
+
+.lightbox img {
+	max-height: 95vh;
+	border: 1px black solid;
+}
+
+.wildfirecenter{
+	text-align: center;
+	margin: 15px;
+}
