@@ -14,7 +14,10 @@
         <!--Google Fonts-->
         <style>
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap');</style>
-        <style> body {background-image: url("images/atlBG90.png") !important;}</style>
+        <style> body {background-image: url('images/atlBG90.png') !important; background-attachment: fixed !important; background-repeat: no-repeat !important; background-size: cover; color: #fff;}
+                .container {padding-top: 5rem;}
+                li {line-height: 2rem;}
+        </style>
     </head>
     <body>
         <!--Navigation-->
@@ -39,22 +42,39 @@
             
 
         <div class="container">
-            <div class="row">
+            <div class="row" style="text-align: center;">
                 <div class="col-12 col-lg-6 left">
-                    <h1>Left Column</h1>
+                    <img src="images/Kermit.png" style="width: 50%;">
+                    <h1>Kermit the Frog</h1>
+                    <h3><i>kermit.frog@sesamestreet.com</i></h3>
+                    <ul style="text-align: left;">
+                      <li>Lake Lanier, GA</li>
+                      <li><b>Primary Designate:</b> Fozzy Bear</li>
+                      <li><i>It ain't easy being green</i></li>
+                      <li>May 9</li>
+                      <li>Consultant for Georgia EPD's <i>Watershed Protection</i> program</li>
+                    </ul>
                 </div>
                 <div class="col-12 col-lg-6 right">
-                    <h1>Right Column</h1>
+                  <h1>Settings</h1>
+                  <ul style="text-align: left;">
+                    <li><b>Locations:</b> Conyers is your default AQI. Change default/add locations</li>
+                    <li><b>Emergency Contact:</b> Fozzy Bear</li>
+                    <li><b>Notifications:</b> Choose the time and/or the frequency to receive notices.</li>
+                    <li><b>GPS Access:</b> AirGeorgia requests access to your GPS only to send alerts while you're in transit.</li>
+                    <li><b>Alerts:</b> Choose the type and frequency of alerts whenever hazardous conditions occur while you're in transit.</li>
+                    <li><b>AQI Advice:</b>  Subscribe and receive helpful articles about AQI and tips on how to cope with adverse AQI days.</li>
+                  </ul>
                 </div>
             </div>
         </div>
 
          <!--Footer-->
          <footer class="container-fluid text-center customNav" style="position: fixed;left: 0;bottom: 0; width: 100%;">
-            <div><p><small>Customize information your way! New improved interface now available on your iPhone, Android devices and Wearables. Download <b>O<sub>2</sub> To Go</b> today!</small></p>
-          <img src="images/applestore.png" alt=" Download from Apple store" style="width:150px;"><img src="images/playstore.png" alt="Download from google playstore" style="width:150px;">
-            </div> 
-          </footer>
+          <div><small>Customize information your way! New improved interface now available on your iPhone, Android devices and Wearables. Download <b>O<sub>2</sub> To Go</b> today!</small>
+        <img src="images/applestore.png" alt=" Download from Apple store" style="width:150px;"><img src="images/playstore.png" alt="Download from google playstore" style="width:150px;">
+          </div> 
+        </footer>
 
     </body>
 </html>
