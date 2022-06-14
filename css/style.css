@@ -1,6 +1,6 @@
 body {background-color: #C8E3E8; font-family: 'Oxygen', sans-serif; margin-top: 5.125rem; }
 h1 {font-family: 'Libre Baskerville', serif;}
-.a {text-decoration: none !important; color:#fff;}
+.a {text-decoration: none !important; color:#fff !important;}
 .wrapper {margin: 0 auto;}
 .left, .right {width:50%}
 .right {border-left: #fff 1px solid;}
