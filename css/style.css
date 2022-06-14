@@ -14,7 +14,7 @@ li {padding-right: 3rem; padding-left: 3rem;}
 nav .btn {background-color: #428099 !important; color: #fff; border: 0px !important;}
 nav .btn:hover {background-color: #fd9d3d !important; border: 0px;}
 .btn-outline-success {border: 0px !important;}
-li:hover {background-color: #fd9d3d !important;}
+.nav li:hover {background-color: #fd9d3d !important;}
 
 /*Jumbotron*/
 .jumbotron {background-image: url("../images/haralsonMill-lg.jpg"); background-size: cover; text-align: center; color: #fff; min-height: 460px;border-radius: 0px;}
