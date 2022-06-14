@@ -31,7 +31,7 @@ li:hover {background-color: #fd9d3d !important;}
 }
 
 /*Cards*/
-.card-deck {margin-bottom: 6rem;}
+.row {margin-bottom: 6rem;}
 .card {background-color: transparent !important; border: 0px !important;}
 .card-img-top {background-color: #3B5A2A !important; color: #fff; padding: 1rem; border-radius: 20px 20px 0px 0 !important;}
 .card-body {background-color: #fff !important; border: #3b5a2a 1px solid !important;}
