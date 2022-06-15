@@ -36,7 +36,11 @@
         <!--Google Fonts-->
         <style>
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap');</style>
-        <style> body {background-image: url('images/atlBG90.png') !important; background-attachment: fixed !important; background-repeat: no-repeat !important; background-size: cover; color: #fff;}</style>
+        <style> body {background-image: url('images/atlBG90.png') !important; background-attachment: fixed !important; background-repeat: no-repeat !important; background-size: cover; color: #fff;}
+                .container {padding-top: 5rem; padding-bottom: 10rem;}
+                li {line-height: 2rem;}
+                .tc {width: 100%;}
+        </style>
     </head>
     <body>
         <!--Navigation-->
@@ -54,32 +58,38 @@
               <li><a href="about.html"><img src="images/AQIw.png" alt="About AQI  link"></a></li>
               <li><a href="profile.html"><img src="images/sos.png" alt="SOS link"></a></li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="index.html">Sign out</a></button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign out</button>
   
           </div>
         </nav>
           
 
-        <div class="container" style="width: 70%; padding: 50px;">
-          <div class="row">
+        <div class="container">
+          <div class="row" style="text-align: center;">
               <div class="col-12 col-lg-6 left">
-                  <h1>Locations</h1><br><br>
-                  <img src="images/locations-page.png">
+                  <h1>Locations</h1>
+                  <ul style="text-align: left;">
+                    <li><b>Conyers</b> is your default AQI. Change location?</li>
+                    <li><b>Athens</b></li>
+                    <li><b>Atlanta</b></li>
+                    <li><b>Gwinnett Tech</b></li>
+                    <li><b>McDonough</b></li>
+                  </ul>
               </div>
               <div class="col-12 col-lg-6 right">
-                  <h1>Interactive Maps</h1><br>
+                  <h1>Interactive Map</h1><br>
                   <table style="width: 50%;">
-                    <tr>
+                    <tc>
                       <th>Current AQI</th>
-                    </tr>
-                    <tr>
+                    </tc>
+                    <tc>
                       <th>Today's AQI Loop</th>
-                      </tr>
-                    <tr>
+                      </tc>
+                    <tc>
                       <th>Yesterday's AQI Loop</th>
-                  </tr>
+                  </tc>
                 </table>
-                  <img src="images/gaMAP.png" style="width: 125%; border: #fff; border-style: solid; border-width: 3px;" >
+                  <img src="images/gaMAP.png" style="width: 100%; border: #fff; border-style: solid; border-width: 3px;" >
               </div>
           </div>
         </div>
